@@ -11,7 +11,14 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/', function() {
+	return "hello!";
+});
+
+Route::get('/lorem-ipsum/{numParagraphs?}', function($numParagraphs = 1) {
+	return "let's generate ".$numParagraphs." paragraphs of lorem ipsum text";
+});
+
+Route::get('/users/{numUsers?}', function($numUsers = 1) {
+	return "let's generate ".$numUsers." fake users";
 });
