@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function() {
-	return "hello!";
+	return View::make('index');
 });
 
 Route::get('/lorem-ipsum/{numParagraphs?}', function($numParagraphs = 1) {
