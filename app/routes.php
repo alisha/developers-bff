@@ -16,9 +16,15 @@ Route::get('/', function() {
 });
 
 Route::get('/lorem-ipsum/{numParagraphs?}', function($numParagraphs = 1) {
-	return "let's generate ".$numParagraphs." paragraphs of lorem ipsum text";
+	$generator = new Badcow\LoremIpsum\Generator();
+    $text = $generator->getParagraphs($numParagraphs);
+   	return View::make('loremipsum', array('text' => $text));
 });
 
 Route::get('/users/{numUsers?}', function($numUsers = 1) {
 	return "let's generate ".$numUsers." fake users";
+});
+
+Route::get('/form', function() {
+	return View::make('form');
 });
