@@ -12,7 +12,7 @@
 	<body>
 		<p><a href="/">Home</a></p>
 		<p><a href="/lorem-ipsum">Lorem Ipsum Generator</a></p>
-		<p><a href="/">Fake User Generator</a></p>
+		<p><a href="/users">Fake User Generator</a></p>
 
 		@yield('content')
 	</body>

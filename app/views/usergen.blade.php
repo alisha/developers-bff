@@ -1,7 +1,7 @@
 @extends('form')
 
 @section('title')
-Fake User Genera Usertor
+Fake User Generator
 @stop
 
 @section('content')
