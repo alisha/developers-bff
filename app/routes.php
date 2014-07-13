@@ -29,9 +29,20 @@ Route::post('/lorem-ipsum/{numParagraphs?}', function() {
 });
 
 Route::get('/users/{numUsers?}', function($numUsers = 1) {
-	return "let's generate ".$numUsers." fake users";
+	$users = array();
+	for ($i = 0; $i < $numUsers; $i++) { 
+		array_push($users, Faker\Factory::create());
+	}
+	return View::make('usergen', array('users' => $users, 'label' => 'Number of Users'));
+});
+
+Route::post('/users/{numUsers?}', function() {
+	Input::flash();
+	$data = Input::old('numItems');
+	$path = '/users/' . $data;
+	return Redirect::to($path);
 });
 
 Route::get('/form', function() {
-	return View::make('form');
+	return View::make('form', array('label' => 'Secrets'));
 });
