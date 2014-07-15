@@ -9,7 +9,18 @@ Fake User Generator
 
 	@parent
 
+@stop
+
+@section('otherOptions')
+	{{ Form::label('showAddress', 'Show address?') }}
+	{{ Form::checkbox('showAddress', 1) }}
+@stop
+
+@section('results')
 	@foreach ($users as $user)
 		<p>{{ $user->name }}</p>
+		@if (isset($showAddress))
+			<p>{{ $user->address }}</p>
+		@endif
 	@endforeach
 @stop

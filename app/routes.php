@@ -17,21 +17,6 @@ Route::post('/lorem-ipsum/{numParagraphs?}', function() {
 	return Redirect::to($path);
 });
 
-Route::get('/users/{numUsers?}', function($numUsers = 2) {
-	$users = array();
-	for ($i = 0; $i < $numUsers; $i++) { 
-		array_push($users, Faker\Factory::create());
-	}
-	return View::make('usergen', array('users' => $users, 'label' => 'Number of Users'));
-});
+Route::get('/users/{numUsers?}', 'UserController@showUsers');
 
-Route::post('/users/{numUsers?}', function() {
-	Input::flash();
-	$data = Input::old('numItems');
-	$path = '/users/' . $data;
-	return Redirect::to($path);
-});
-
-Route::get('/form', function() {
-	return View::make('form', array('label' => 'Secrets'));
-});
+Route::post('/users/{numUsers?}', 'UserController@getNumberOfUsers');
