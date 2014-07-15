@@ -1,14 +1,17 @@
 @extends('form')
 
 @section('title')
-Fake User Generator
+	Fake User Generator
+@stop
+
+@section('stylesheets')
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('usergen.css') }}">
 @stop
 
 @section('content')
 	<h1>Fake User Generator</h1>
 
 	@parent
-
 @stop
 
 @section('results')

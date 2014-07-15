@@ -1,0 +1,12 @@
+.navbar {
+	background-color: #0F9596;
+}
+
+h1 {
+	color: #0F9596;
+}
+
+input[type=submit] {
+	background-color: #0F9596;
+	border-color: #0F9596;
+}

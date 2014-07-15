@@ -1,3 +1,27 @@
 html {
 	font-family: Helvetica;
+	margin-left: 10px;
+}
+
+.navbar {
+	height: 50px;
+}
+
+.navbar p {
+	float: left;
+	padding: 0px 12px 0px 12px;
+}
+
+.navbar a:link {
+	color: white;
+}
+
+.navbar a:visited {
+	color: white;
+}
+
+input[type=submit] {
+	color: white;
+	border: solid;
+	border-radius: 2px;
 }
