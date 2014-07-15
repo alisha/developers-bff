@@ -11,7 +11,7 @@ class UserController extends BaseController {
 
 	public function showUsers($numUsers = 2) {
 		$users = App::make('UserController')->generateUsers($numUsers);
-		return View::make('usergen', array('users' => $users, 'label' => 'Number of Users'));
+		return View::make('usergen', array('users' => $users, 'label' => 'Number of Users', 'value' => $numUsers));
 	}
 
 	public function getNumberOfUsers() {

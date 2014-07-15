@@ -3,7 +3,7 @@
 @section('content')
 	{{ Form::open(array()) }}
 		{{ Form::label('numItems', $label) }}
-		{{ Form::input('number', 'numItems', '2') }}
+		{{ Form::input('number', 'numItems', $value) }}
 		{{ Form::submit('Submit') }}
 	{{ Form::close() }}
 

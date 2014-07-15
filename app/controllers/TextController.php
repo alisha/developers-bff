@@ -9,7 +9,7 @@ class TextController extends BaseController {
 
 	public function showText($numParagraphs = 2) {
 		$text = App::make('TextController')->generateText($numParagraphs);
-		return View::make('loremipsum', array('text' => $text, 'label' => 'Number of Paragraphs'));
+		return View::make('loremipsum', array('text' => $text, 'label' => 'Number of Paragraphs', 'value' => $numParagraphs));
 	}
 
 	public function getNumParagraphs() {
