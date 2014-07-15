@@ -5,7 +5,6 @@
 		{{ Form::label('numItems', $label) }}
 		{{ Form::input('number', 'numItems', '2') }}
 		{{ Form::submit('Submit') }}
-		@yield('otherOptions')
 	{{ Form::close() }}
 
 	@yield('results')
